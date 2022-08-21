@@ -1,11 +1,19 @@
 import React from "react"
 import { AppProps } from "next/app"
-import { CssBaseline } from "@mui/material"
+import { AppBar, CssBaseline } from "@mui/material"
+import { UserProvider } from '@auth0/nextjs-auth0';
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+
+const MyApp = ({ Component: View, pageProps }: AppProps) => {
+
   return (<>
     <CssBaseline />
-    <Component {...pageProps} />
+    <UserProvider>
+      <AppBar position="relative">
+        Some App Bar
+      </AppBar>
+      <View {...pageProps} />
+    </UserProvider>
   </>
   )
 }
