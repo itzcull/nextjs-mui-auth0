@@ -2,7 +2,7 @@ import React from "react"
 import { AppProps } from "next/app"
 import { AppBar, CssBaseline, ThemeProvider } from "@mui/material"
 import { UserProvider } from '@auth0/nextjs-auth0';
-import theme from "../theme";
+import theme from "@theme/index";
 
 
 const MyApp = ({ Component: View, pageProps, router }: AppProps) => {
