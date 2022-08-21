@@ -1,8 +1,6 @@
 import { createTheme } from "@mui/material";
 import breakpoints from "./breakpoints";
 import components from "./components";
-import direction from "./direction";
-import mixins from "./mixins";
 import palette from "./palette";
 import shadows from "./shadows";
 import shape from "./shape";
@@ -14,8 +12,8 @@ import zIndex from "./zIndex";
 export default createTheme({
 	breakpoints,
 	components,
-	direction,
-	mixins,
+	direction: 'ltr',
+	// mixins,
 	palette,
 	shadows,
 	shape,
